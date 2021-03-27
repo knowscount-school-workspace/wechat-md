@@ -1,22 +1,28 @@
+/*
+ * @Date: 27/03/2021 17.05.43 +0800
+ * @Author: KnowsCount
+ * @LastEditTime: 27/03/2021 17.07.52 +0800
+ * @FilePath: /md/src/plugins/element/index.js
+ */
 import Vue from "vue";
 import {
-  Container,
-  Header,
-  Upload,
-  Tooltip,
-  Form,
-  FormItem,
-  Select,
-  Option,
-  ColorPicker,
-  Switch,
-  Button,
-  Main,
-  Col,
-  Row,
-  Dialog,
-  Loading,
-  Message,
+	Container,
+	Header,
+	Upload,
+	Tooltip,
+	Form,
+	FormItem,
+	Select,
+	Option,
+	ColorPicker,
+	Switch,
+	Button,
+	Main,
+	Col,
+	Row,
+	Dialog,
+	Loading,
+	Message,
 } from "element-ui";
 
 Vue.use(Container);
