@@ -45,7 +45,10 @@
 						>
 							<div class="preview">
 								<section id="output" v-html="output"></section>
-								<div class="loading-mask" v-if="nightMode && isCoping">
+								<div
+									class="loading-mask"
+									v-if="nightMode && isCoping"
+								>
 									<div class="loading__img"></div>
 									<span>正在生成</span>
 								</div>
@@ -170,10 +173,17 @@ export default {
 
 			// 粘贴上传图片并插入
 			this.editor.on("paste", (cm, e) => {
-				if (!(e.clipboardData && e.clipboardData.items) || this.isImgLoading) {
+				if (
+					!(e.clipboardData && e.clipboardData.items) ||
+					this.isImgLoading
+				) {
 					return;
 				}
-				for (let i = 0, len = e.clipboardData.items.length; i < len; ++i) {
+				for (
+					let i = 0, len = e.clipboardData.items.length;
+					i < len;
+					++i
+				) {
 					let item = e.clipboardData.items[i];
 					if (item.kind === "file") {
 						// 校验图床参数
@@ -284,23 +294,37 @@ export default {
 				clearTimeout(this.timeout);
 				if (text === "preview") {
 					source = this.$refs.preview.$el;
-					target = document.getElementsByClassName("CodeMirror-scroll")[0];
+					target = document.getElementsByClassName(
+						"CodeMirror-scroll"
+					)[0];
 					this.editor.off("scroll", editorScrollCB);
 					this.timeout = setTimeout(() => {
 						this.editor.on("scroll", editorScrollCB);
 					}, 300);
 				} else if (text === "editor") {
-					source = document.getElementsByClassName("CodeMirror-scroll")[0];
+					source = document.getElementsByClassName(
+						"CodeMirror-scroll"
+					)[0];
 					target = this.$refs.preview.$el;
-					target.removeEventListener("scroll", previewScrollCB, false);
+					target.removeEventListener(
+						"scroll",
+						previewScrollCB,
+						false
+					);
 					this.timeout = setTimeout(() => {
-						target.addEventListener("scroll", previewScrollCB, false);
+						target.addEventListener(
+							"scroll",
+							previewScrollCB,
+							false
+						);
 					}, 300);
 				}
 
 				let percentage =
-					source.scrollTop / (source.scrollHeight - source.offsetHeight);
-				let height = percentage * (target.scrollHeight - target.offsetHeight);
+					source.scrollTop /
+					(source.scrollHeight - source.offsetHeight);
+				let height =
+					percentage * (target.scrollHeight - target.offsetHeight);
 
 				target.scrollTo(0, height);
 			};
@@ -311,7 +335,11 @@ export default {
 				scrollCB("preview");
 			};
 
-			this.$refs.preview.$el.addEventListener("scroll", previewScrollCB, false);
+			this.$refs.preview.$el.addEventListener(
+				"scroll",
+				previewScrollCB,
+				false
+			);
 			this.editor.on("scroll", editorScrollCB);
 		},
 		// 更新编辑器

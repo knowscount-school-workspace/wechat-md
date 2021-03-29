@@ -68,11 +68,14 @@
 							type="primary"
 							href="https://gitee.com/profile/personal_access_tokens"
 							target="_blank"
-							>请在 Gitee「设置->安全设置->私人令牌」中生成</el-link
+							>请在
+							Gitee「设置->安全设置->私人令牌」中生成</el-link
 						>
 					</el-form-item>
 					<el-form-item>
-						<el-button type="primary" @click="saveGiteeConfiguration"
+						<el-button
+							type="primary"
+							@click="saveGiteeConfiguration"
 							>保存配置</el-button
 						>
 					</el-form-item>
@@ -111,7 +114,9 @@
 						>
 					</el-form-item>
 					<el-form-item>
-						<el-button type="primary" @click="saveGitHubConfiguration"
+						<el-button
+							type="primary"
+							@click="saveGitHubConfiguration"
 							>保存配置</el-button
 						>
 					</el-form-item>
@@ -168,7 +173,9 @@
 						>
 					</el-form-item>
 					<el-form-item>
-						<el-button type="primary" @click="saveAliOSSConfiguration"
+						<el-button
+							type="primary"
+							@click="saveAliOSSConfiguration"
 							>保存配置</el-button
 						>
 					</el-form-item>
@@ -225,7 +232,9 @@
 						>
 					</el-form-item>
 					<el-form-item>
-						<el-button type="primary" @click="saveTxCOSConfiguration"
+						<el-button
+							type="primary"
+							@click="saveTxCOSConfiguration"
 							>保存配置</el-button
 						>
 					</el-form-item>
@@ -282,7 +291,9 @@
 						>
 					</el-form-item>
 					<el-form-item>
-						<el-button type="primary" @click="saveQiniuConfiguration"
+						<el-button
+							type="primary"
+							@click="saveQiniuConfiguration"
 							>保存配置</el-button
 						>
 					</el-form-item>
@@ -390,16 +401,23 @@ export default {
 		},
 		saveGitHubConfiguration() {
 			if (!(this.formGitHub.repo && this.formGitHub.accessToken)) {
-				const blankElement = this.formGitHub.repo ? "token" : "GitHub 仓库";
+				const blankElement = this.formGitHub.repo
+					? "token"
+					: "GitHub 仓库";
 				this.$message.error(`参数「​${blankElement}」不能为空`);
 				return;
 			}
-			localStorage.setItem("githubConfig", JSON.stringify(this.formGitHub));
+			localStorage.setItem(
+				"githubConfig",
+				JSON.stringify(this.formGitHub)
+			);
 			this.$message.success("保存成功");
 		},
 		saveGiteeConfiguration() {
 			if (!(this.formGitee.repo && this.formGitee.accessToken)) {
-				const blankElement = this.formGitee.repo ? "私人令牌" : "Gitee 仓库";
+				const blankElement = this.formGitee.repo
+					? "私人令牌"
+					: "Gitee 仓库";
 				this.$message.error(`参数「​${blankElement}」不能为空`);
 				return;
 			}
@@ -418,7 +436,10 @@ export default {
 				this.$message.error(`阿里云 OSS 参数配置不全`);
 				return;
 			}
-			localStorage.setItem("aliOSSConfig", JSON.stringify(this.formAliOSS));
+			localStorage.setItem(
+				"aliOSSConfig",
+				JSON.stringify(this.formAliOSS)
+			);
 			this.$message.success("保存成功");
 		},
 

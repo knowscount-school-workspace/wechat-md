@@ -19,7 +19,11 @@
 		<span slot="footer" class="dialog-footer">
 			<el-button
 				type="primary"
-				@click="onRedirect('https://github.com/knowscount-school-workspace/md')"
+				@click="
+					onRedirect(
+						'https://github.com/knowscount-school-workspace/md'
+					)
+				"
 				plain
 				>GitHub 仓库</el-button
 			>

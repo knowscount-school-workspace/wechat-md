@@ -47,7 +47,9 @@
 			<el-button :type="btnType" plain @click="$emit('input', false)"
 				>取 消</el-button
 			>
-			<el-button :type="btnType" @click="insertTable" plain>确 定</el-button>
+			<el-button :type="btnType" @click="insertTable" plain
+				>确 定</el-button
+			>
 		</div>
 	</el-dialog>
 </template>

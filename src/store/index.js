@@ -69,7 +69,8 @@ const mutations = {
 		state.currentSize =
 			localStorage.getItem("size") || config.sizeOption[2].value;
 		state.codeTheme =
-			localStorage.getItem("codeTheme") || config.codeThemeOption[0].value;
+			localStorage.getItem("codeTheme") ||
+			config.codeThemeOption[0].value;
 		state.citeStatus = localStorage.getItem("citeStatus") === "true";
 		state.nightMode = localStorage.getItem("nightMode") === "true";
 		state.wxRenderer = new WxRenderer({
@@ -84,7 +85,8 @@ const mutations = {
 
 		if (!editorDom.value) {
 			editorDom.value =
-				localStorage.getItem("__editor_content") || formatDoc(DEFAULT_CONTENT);
+				localStorage.getItem("__editor_content") ||
+				formatDoc(DEFAULT_CONTENT);
 		}
 		state.editor = CodeMirror.fromTextArea(editorDom, {
 			mode: "text/x-markdown",

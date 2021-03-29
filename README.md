@@ -20,9 +20,9 @@ Markdown 文档自动即时渲染为微信图文，让你不再为微信文章�
 
 ## 在线编辑器地址
 
-- Netlify: https://mdhere.netlify.app
-- Gitee Pages：https://doocs.gitee.io/md
-- GitHub Pages：https://doocs.github.io/md
+-   Netlify: https://mdhere.netlify.app
+-   Gitee Pages：https://doocs.gitee.io/md
+-   GitHub Pages：https://doocs.github.io/md
 
 注：推荐使用 Chrome 浏览器，效果最佳。另外，对于国内（中国）的朋友，访问 [Gitee Pages](https://doocs.gitee.io/md) 速度会相对快一些。
 
@@ -34,13 +34,13 @@ Markdown 文档自动即时渲染为微信图文，让你不再为微信文章�
 
 ## 功能特性
 
-- [x] 支持自定义 CSS 样式
-- [x] 支持 Markdown 所有基础语法
-- [x] 支持浅色、暗黑两种主题模式
-- [x] 支持 <kbd>Ctrl</kbd> + <kbd>F</kbd> 快速格式化文档
-- [x] 支持色盘取色，快速替换文章整体色调
-- [x] 支持多图上传，可自定义配置图床
-- [x] 支持在编辑框右键弹出功能选项卡
+-   [x] 支持自定义 CSS 样式
+-   [x] 支持 Markdown 所有基础语法
+-   [x] 支持浅色、暗黑两种主题模式
+-   [x] 支持 <kbd>Ctrl</kbd> + <kbd>F</kbd> 快速格式化文档
+-   [x] 支持色盘取色，快速替换文章整体色调
+-   [x] 支持多图上传，可自定义配置图床
+-   [x] 支持在编辑框右键弹出功能选项卡
 
 ## 目前支持哪些图床
 

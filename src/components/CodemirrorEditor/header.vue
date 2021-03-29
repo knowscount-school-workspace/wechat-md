@@ -2,7 +2,11 @@
 	<el-container class="top is-dark">
 		<div class="left-side">
 			<!-- 图片上传 -->
-			<el-tooltip :effect="effect" content="上传图片" placement="bottom-start">
+			<el-tooltip
+				:effect="effect"
+				content="上传图片"
+				placement="bottom-start"
+			>
 				<i
 					class="el-icon-upload"
 					size="medium"
@@ -283,7 +287,8 @@ export default {
 				// 输出提示
 				this.$notify({
 					showClose: true,
-					message: "已复制渲染后的文章到剪贴板，可直接到公众号后台粘贴",
+					message:
+						"已复制渲染后的文章到剪贴板，可直接到公众号后台粘贴",
 					offset: 80,
 					duration: 1600,
 					type: "success",
