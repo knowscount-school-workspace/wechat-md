@@ -52,7 +52,7 @@ export default {
 		// 段落样式
 		p: {
 			margin: "1.5em 8px",
-			"letter-spacing": "0.1em",
+			// "letter-spacing": "0.1em",
 		},
 
 		// 引用样式
@@ -67,7 +67,7 @@ export default {
 		},
 
 		blockquote_p: {
-			"letter-spacing": "0.1em",
+			// "letter-spacing": "0.1em",
 			color: "rgb(80, 80, 80)",
 			"font-size": "1em",
 			display: "block",
