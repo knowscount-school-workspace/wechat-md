@@ -116,7 +116,7 @@
 				<el-switch
 					class="header__switch"
 					v-model="citeStatus"
-					active-color="#67c23a"
+					active-color="#409EFF"
 					inactive-color="#dcdfe6"
 					@change="statusChanged"
 				>
