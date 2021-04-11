@@ -265,7 +265,7 @@ export default {
 			this.$emit("refresh");
 		},
 		// 复制到微信公众号
-		copy(e) {
+		copy() {
 			this.$emit("startCopy");
 			setTimeout(() => {
 				let clipboardDiv = document.getElementById("output");
