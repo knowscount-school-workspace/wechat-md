@@ -71,6 +71,22 @@
 				</el-option>
 			</el-select>
 			<el-select
+                    v-model="codeTheme"
+                    size="mini"
+                    placeholder="选择主题"
+                    @change="codeThemeChanged"
+                >
+                    <el-option
+                        v-for="codeTheme in config.codeThemeOption"
+                        :key="codeTheme.value"
+                        :label="codeTheme.label"
+                        :value="codeTheme.value"
+                    >
+                    <span class="select-item-left">{{ codeTheme.label }}</span>
+                    <span class="select-item-right">{{ codeTheme.desc }}</span>
+                    </el-option>
+            </el-select>
+			<el-select
 				v-model="selectSize"
 				size="mini"
 				placeholder="选择段落字号"
